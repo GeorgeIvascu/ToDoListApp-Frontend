@@ -1,0 +1,18 @@
+
+<header>
+    <nav class="navbar navbar-expand-sm bg-dark">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">To-Do List Application</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a routerLink="#" *ngIf="this.hardcodedAuth.isUserLoggedIn()">Home</a></li>
+            <li><a routerLink="/todo-list" *ngIf="this.hardcodedAuth.isUserLoggedIn()">To-Dos</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="/logout" *ngIf="this.hardcodedAuth.isUserLoggedIn()">Log out</a></li>
+            <li><a routerLink="/welcome" *ngIf="!this.hardcodedAuth.isUserLoggedIn()">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+</header>

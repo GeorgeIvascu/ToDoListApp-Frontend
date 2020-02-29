@@ -1,0 +1,9 @@
+<p>Welcome {{user}}</p>
+<button type="button" class="btn btn-dark" (click)="getWelcomeBeanWithPath()">Get Welcome Message</button>
+
+<div class="container" *ngIf="welcomeBean">
+    <h2>Your customized welcome message from /bean</h2>
+    {{welcomeBean.message}}
+</div>
+
+<p *ngIf="errorMessage">{{errorMessage}}</p>
